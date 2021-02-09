@@ -1,8 +1,3 @@
-
-"use strict"; //använd modern javascript
-
-const LOCAL_STORAGE_KEY_TODOS = "app.todos.advanced";
-let todos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_TODOS)) || [];
 //hämta olika html element 
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
@@ -27,36 +22,24 @@ function addTodo(event) {
    todoDiv.appendChild(newTodo);
 
    //ta bort  knapp
-   const deleteButton = document.createElement('button');
-   deleteButton.innerText ='x';
-   deleteButton.classList.add("delete-btn");
-   todoDiv.appendChild(deleteButton);
+   const completeButton = document.createElement('button');
+   completeButton.innerText ='x';
+   completeButton.classList.add("complete-btn");
+   todoDiv.appendChild(completeButton);
 
    //append to list
    todoList.appendChild(todoDiv);
 
-   //ta bort todo-input value
+   //clear todo-input value
    todoInput.value= "";
 
 }
 function deleteCheck(e){
     const item = e.target;
-    //ta bort todo
-    if (item.classList[0] === 'delete-btn') {
+    //delete todo
+    if (item.classList[0] === 'complete-btn') {
         const todo = item.parentElement;
         todo.remove();
-        updateList();
     }
+    console.log("något");
 }
-
-function updateList() {
-    saveList();
-    listRoot.innerHTML = "";
-    listRoot.append(todoList(todos));
-  }
-  
-  function saveList() {
-    localStorage.setItem(LOCAL_STORAGE_KEY_TODOS, JSON.stringify(todos));
-  }
-  
-  updateList();
