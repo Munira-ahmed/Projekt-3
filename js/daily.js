@@ -34,6 +34,7 @@ function addTodo(event) {
    todoInput.value= "";
 
 }
+
 function deleteCheck(e){
     const item = e.target;
     //delete todo
@@ -41,5 +42,5 @@ function deleteCheck(e){
         const todo = item.parentElement;
         todo.remove();
     }
-    console.log("något");
+ 
 }
