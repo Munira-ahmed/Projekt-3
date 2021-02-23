@@ -3,6 +3,7 @@ const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
+
 //eventlisteners - gör saker beroende på ett event, tex en klick
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
@@ -34,6 +35,7 @@ function addTodo(event) {
    todoInput.value= "";
 
 }
+
 
 function deleteCheck(e){
     const item = e.target;

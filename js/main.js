@@ -38,7 +38,6 @@ function addTodo(event) {
    //clear todo-input value
    todoInput.value= "";
 }
-//gör en line throug när man trycker på tasken 
 
 
 function deleteTodo(e){

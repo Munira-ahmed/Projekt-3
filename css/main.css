@@ -108,4 +108,36 @@ form{
        text-decoration: line-through;
        font-weight: bolder;
 }
+
 /*nav*/
+nav{
+    overflow: hidden;
+  background-color: #333;
+}
+li a{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+li :hover{
+  background-color: orange;
+  color: white;
+}
+li a.aktiv{
+    background-color: orange;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+
+/*img*/
+img{
+    max-width: 65%;
+    margin: 0;
+    max-height: 50%;
+}
