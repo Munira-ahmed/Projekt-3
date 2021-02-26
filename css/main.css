@@ -33,7 +33,7 @@ align-items: center;
     border-radius: 1rem;
 }
 .dark {
-    background-color:rgb(25, 39, 26);
+    background-color: #333;;
     color: white;
 }
  
@@ -52,16 +52,23 @@ form input, form button{
     padding: 0.5rem;
     font-size: 1.5rem;
     border: none;
-    background: white;
-   
+    background: white;  
+     
 }
 
-form button{
-    
-    background: white;
+form button{    
+    background: orange;
     cursor: pointer;
     transition: all 0.2s ease;
+    border-radius: 10%; 
 }
+
+.todo-input{
+    border-bottom: 2px solid black;
+    outline: none;
+    margin-right: 1vw;
+}
+
 form button:hover{
    background-color: black;
     color: white;
@@ -92,6 +99,11 @@ form button:hover{
     padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
+    border-radius: 20%;
+}
+.delete-btn:hover{
+   background-color: red;
+   font-weight: bolder;   
 }
 
 .todo-item {
@@ -103,10 +115,6 @@ form{
     justify-content: center;
     align-items: center;
 
-}
-.todo-item:hover{
-       text-decoration: line-through;
-       font-weight: bolder;
 }
 
 /*nav*/
@@ -137,7 +145,8 @@ ul{
 
 /*img*/
 img{
-    max-width: 65%;
+    max-width: 50%;
     margin: 0;
-    max-height: 50%;
+    max-height: 30%;
 }
+
